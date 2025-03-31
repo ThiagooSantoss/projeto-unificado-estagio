@@ -1,72 +1,101 @@
-# 🏥 Vue Operadoras - Consulta de Operadoras de Saúde
-Aplicação Vue.js para busca e visualização de operadoras de saúde conectada a uma API Flask local.
+# 🏥 Vue Operadoras - Sistema de Consulta de Planos de Saúde
+
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.x-brightgreen)](https://vuejs.org/)
+[![Flask](https://img.shields.io/badge/Backend-Flask-blue)](https://flask.palletsprojects.com/)
+
+Aplicação web para consulta de operadoras de saúde, com frontend em Vue.js 3 e backend em Flask.
 
 ## 📋 Visão Geral
-Este projeto permite que usuários consultem operadoras de saúde de forma interativa. O frontend foi desenvolvido com Vue.js 3, e o backend é uma API Flask que fornece os dados.
+
+Sistema completo que permite:
+
+- Busca por nome de operadoras
+- Visualização detalhada de registros
+- Integração com API RESTful
+
+## 🛠️ Tecnologias
+
+**Frontend:**
+
+- Vue.js 3 (Options API)
+- Vue Router
+- Axios para requisições HTTP
+- CSS para estilos
+
+**Backend:**
+
+- Python 3.10+
+- Flask
+- Pandas para processamento de dados
 
 ## 🚀 Como Executar
 
 ### Pré-requisitos
-Antes de iniciar, certifique-se de ter os seguintes requisitos instalados:
+
 - Node.js 16.x+
+- Python 3.10+
 - npm 8.x+
-- Backend Flask rodando em `http://localhost:5000`
 
-### Instalação
+### 🔧 Instalação
+
+1. **Backend**:
+
 ```bash
+cd backend
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+python servidor.py
+
+
+2. **Frontend** (em outro terminal):
+cd vue-operadoras
 npm install
-```
-
-### Desenvolvimento
-```bash
 npm run serve
-```
 
-Acesse: http://localhost:8080/search
+🌐 Acessando
+Frontend: http://localhost:8080
 
-### Build para Produção
-```bash
-npm run build
-```
+API: http://localhost:5000/search
 
-### Correção de Código
-```bash
-npm run lint
-```
+📂 Estrutura do Projeto
+teste-Estágio/
+├── backend/               # API Flask
+│   ├── servidor.py        # Endpoints da API
+│   ├── operadoras.csv     # Dados das operadoras
+│   └── requirements.txt   # Dependências Python
+└── vue-operadoras/        # Aplicação Vue
+    ├── src/
+    │   ├── components/    # Componentes Vue
+    │   ├── App.vue        # Componente principal
+    │   └── main.js        # Ponto de entrada
+    └── package.json       # Dependências Node
 
-🛠️ Tecnologias
-Frontend: Vue.js 3
+💻 Comandos Úteis
+Frontend:
+npm run serve    # Inicia servidor de desenvolvimento
+npm run build    # Gera build para produção
+npm run lint     # Corrige problemas de estilo
 
-Build: Vue CLI
+Backend:
+ python servidor.py        # Alternativa para iniciar o servidor
 
-Estilo: CSS
 
-HTTP: Fetch API
+ 🤝 Contribuição
+Faça um fork do projeto
 
-📂 Estrutura Principal
-src/
-├── components/
-│   └── SearchOperadoras.vue
-├── App.vue
-└── main.js
+Crie uma branch (git checkout -b feature/nova-feature)
 
-⚠️ Importante
-O projeto precisa do backend Flask rodando em http://localhost:5000 para funcionar corretamente.
-Caso não tenha o backend configurado, siga as instruções no repositório correspondente.
+Commit suas alterações (git commit -m 'Adiciona nova feature')
+
+Push para a branch (git push origin feature/nova-feature)
+
+Abra um Pull Request
 
 📝 Licença
 Este projeto está licenciado sob a MIT License.
 
+Desenvolvido por Thiago Santos | 2025
 
-
-✨ Passos para adicionar este README ao seu projeto:
-Abra o VSCode
-
-Navegue até a raiz do projeto
-
-Crie (ou edite) o arquivo README.md
-
-Copie e cole o conteúdo acima
-
-Salve o arquivo (Ctrl + S)
+```
 
